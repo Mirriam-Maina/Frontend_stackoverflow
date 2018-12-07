@@ -1,30 +1,36 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: {
-    landingpage: './src/index.js',
-    login: './src/components/login',
-    singup: './src/components/Signup',
-  },
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'index_bundle.js'
+    path: path.join(__dirname, "/dist"),
+    filename: "[name].bundle.js"
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude:/node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        test: /\.css$/, use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"]
+      },      
+      {
+        test: /\.(png|jpe?g|svg|gif)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true,
+              bypassOnDebug: true,               
+            },
+          },
+        ],
       }
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+    new HtmlWebpackPlugin({template: "./public/index.html"})
   ]
 };

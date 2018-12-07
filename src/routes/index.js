@@ -1,23 +1,17 @@
-import LandingPage from '../components/App';
-import Signup from '../components/Signup';
-import Login from '../components/Login';
+import LandingPage from '../views/Landingpage';
+import Post from '../views/Post';
 
-const routes = [
-    {
-        path: '/',
-        name: 'Landing Page',
-        components: LandingPage,
-    },
-    {
-        path: '/signup',
-        name: 'Signup',
-        components: Signup,
-    },
-    {
-        path: '/login',
-        name: 'Login',
-        components: Login,
-    }
+const indexRoutes = [
+  {
+    path: '/',
+    name: 'Landing Page',
+    component: LandingPage,
+  },
+  {
+    path: '/post',
+    name: 'Get Posts',
+    component: Post,
+  },
 ];
 
-export default routes;
+export default indexRoutes;

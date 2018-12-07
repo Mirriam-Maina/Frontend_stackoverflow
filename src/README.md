@@ -14,28 +14,17 @@ yarn install
 
 ```bash
 # Starts are local live-reload server at:
-# http://localhost:8080 to view on your broswer
+# http://localhost:8080 to view on your browser
 yarn run web
 ```
+
 #### 3. Usage
 - Landing Page
 - Fetch Posts
 
-#### Heroku deployment
-[Check it out](https://stackoverflow-lite-frontend.herokuapp.com/)
 
-
-
-### Core
-
-- [x] [React](https://facebook.github.io/react/)
-- [x] [React Router](https://github.com/ReactTraining/react-router)
-- [x] [Redux](http://redux.js.org/)
-
-### Unit Testing
-
-- [x] [Jest](http://facebook.github.io/jest/)
-- [X] [Enzyme](http://airbnb.io/enzyme/)
+#### Resource
+- Hosted on Heroku
 
 
 ## 👋 Authors
